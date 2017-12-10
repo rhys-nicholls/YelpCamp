@@ -3,25 +3,12 @@ var express     = require('express'),
     bodyParser  = require('body-parser'),
     mongoose    = require('mongoose'),
     Campground  = require('./models/campground');
+    seedDb      = require('./seeds')
 
+seedDb();
 mongoose.connect('mongodb://localhost/yelp_camp');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-
-// Campground.create(
-//     {
-//         name: "Sunset Hill",
-//         image: "https://farm9.staticflickr.com/8673/15989950903_8185ed97c3.jpg",
-//         description: "Some of the most amazing sunsets you will ever see"
-//
-//     },
-//     function (err, campground) {
-//         if(err){
-//             console.log(err);
-//         } else {
-//             console.log("success");
-//         }
-//     });
 
 app.get('/', function (req, res) {
     res.render('landing');
@@ -64,15 +51,16 @@ app.post('/campgrounds', function (req, res) {
     });
 });
 
-//SHOW - shows more info about one campground
-app.get('/campgrounds/:id', function (req, res) {
+// SHOW - shows more info about one campground
+app.get("/campgrounds/:id", function(req, res){
     //find the campground with provided ID
-    Campground.findById(req.params.id, function (err, foundCampground) {
+    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
         if(err){
             console.log(err);
         } else {
-            //render show template using information foudn with the ID
-            res.render('show', {campground: foundCampground});
+            console.log(foundCampground);
+            //render show template with that campground
+            res.render("show", {campground: foundCampground});
         }
     });
 });
