@@ -6,17 +6,17 @@ var data = [
     {
         name: "Cloud's Rest",
         image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-        description: "blah blah blah"
+        description: "Lorem ipsum dolor amet quinoa vexillologist mlkshk iceland glossier cardigan banh mi, bicycle rights offal before they sold out actually authentic green juice readymade. Street art occupy selfies small batch la croix. Vexillologist selfies leggings meggings actually fam. Blog XOXO kitsch knausgaard ennui migas af art party artisan pour-over. Tote bag gastropub DIY, brunch offal echo park pug next level. Whatever small batch retro, four loko cliche lyft wayfarers PBR&B."
     },
     {
         name: "Desert Mesa",
-        image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
-        description: "blah blah blah"
+        image: "https://farm2.staticflickr.com/1363/1342367857_2fd12531e7.jpg",
+        description: "Lorem ipsum dolor amet quinoa vexillologist mlkshk iceland glossier cardigan banh mi, bicycle rights offal before they sold out actually authentic green juice readymade. Street art occupy selfies small batch la croix. Vexillologist selfies leggings meggings actually fam. Blog XOXO kitsch knausgaard ennui migas af art party artisan pour-over. Tote bag gastropub DIY, brunch offal echo park pug next level. Whatever small batch retro, four loko cliche lyft wayfarers PBR&B."
     },
     {
         name: "Canyon Floor",
         image: "https://farm1.staticflickr.com/189/493046463_841a18169e.jpg",
-        description: "blah blah blah"
+        description: "Lorem ipsum dolor amet quinoa vexillologist mlkshk iceland glossier cardigan banh mi, bicycle rights offal before they sold out actually authentic green juice readymade. Street art occupy selfies small batch la croix. Vexillologist selfies leggings meggings actually fam. Blog XOXO kitsch knausgaard ennui migas af art party artisan pour-over. Tote bag gastropub DIY, brunch offal echo park pug next level. Whatever small batch retro, four loko cliche lyft wayfarers PBR&B."
     }
 ]
 
