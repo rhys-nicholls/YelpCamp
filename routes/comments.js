@@ -16,7 +16,7 @@ router.get('/new', isLoggedIn, function (req, res) {
 });
 
 // CREATE - Add new comment to database
-router.post('/comments', isLoggedIn, function (req, res) {
+router.post('/', isLoggedIn, function (req, res) {
     //lookup campground using id
     Campground.findById(req.params.id, function (err, campground) {
         if(err){
@@ -28,8 +28,14 @@ router.post('/comments', isLoggedIn, function (req, res) {
                 if(err){
                     console.log(err);
                 } else {
+                    //add username and id to comment
+                    comment.author.id = req.user._id;
+                    comment.author.username = req.user.username;
+                    //save comment
+                    comment.save();
                     //connect comment to campground
                     campground.comments.push(comment);
+                    //save campground
                     campground.save();
                     //redirect to campgrounds show page
                     res.redirect('/campgrounds/' + campground._id);
